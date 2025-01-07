@@ -1,16 +1,26 @@
 "use client"
 import * as Tabs from "@radix-ui/react-tabs"
 import { Button } from "@headlessui/react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Modal from "@/components/tailwind-ui/Modal"
+import mermaid from "mermaid"
 
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
+  function handleClick() {
+    mermaid.contentLoaded()
+  }
+
+  useEffect(() => {
+    document.addEventListener("click", handleClick)
+    return () => document.removeEventListener("click", handleClick)
+  }, [])
+
   return (
     <main className="p-8">
-      <p className="mb-8 mx-auto text-center rounded-full bg-slate-200 w-fit px-4 py-2">Each node in the accessibility tree has four aspects: Name | Role | State | Value</p>
+      <p className="mb-8 mx-auto text-center rounded-full bg-slate-200 w-fit px-4 py-2">Each node in the accessibility tree typically has four aspects: Name | Role | State | Value</p>
       <h2 className="text-4xl mb-4">Modal</h2>
       <div className="grid grid-cols-3 gap-4">
         <div className="col-span-1 border border-slate-300 p-4 rounded">
@@ -51,13 +61,62 @@ export default function Home() {
               className="grow rounded-b-md p-5 outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
               value="tab1"
             >
-              <img className="h-[50vh]" src="https://mermaid.ink/svg/pako:eNpVkbFuxCAMhl8Fec4NXSOlwwmpUzu0nVo6-MBNUAOOODjpdL13L4FyaVnwbz7ZP_YFNBuCHsaAyyRepfIiH8k6OfLxXUELxbd45pkG86sVfFR2z-acufVqjGdPt_eHwGm5y0QJGjKuYquRYmS_QjVq1KGpJ3Q0SEId7QkjCdSaUzEl7REPM5nhE-dj7fr_D2K3uy8mN7slVX399VjJakV56MBRcGhNHs9l5RTEiVzu0efQYPhSoPw1c5giv5y9hj6GRB3kauMEfXHUQVpMtiwt5hm7W3ZB_8a8aTI2cnis2yhLuf4ALOCJmg" />
+              <div className="mermaid">
+                {`
+                graph TD
+    Document["Document | Role=document"]
+    Body["Body | Role=none"]
+    Group1["Group | Role=group"]
+    Button1["Button | Role=button | Name=Deactivate account | Disabled=false"]
+
+    Document --> Body
+    Body --> Group1
+    Group1 --> Button1
+`}
+              </div>
             </Tabs.Content>
             <Tabs.Content
               className="grow rounded-b-md p-5 outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
               value="tab2"
             >
-              <img src="https://mermaid.ink/svg/pako:eNqdVU1v2zAM_SuCzkmB9RjAG9IG7XbYUHQ9bd6BkdhYqCwastQi6Prfpw87dlMFLZaLSPGFIqn3rGcuSCJf8Z2FrmF3m9qw8NuQ8C0a97vmo8n-slvSWMnBr_mfjL0guQ-4uIwYQwYP8WtLvvsUEMkYIbvoTDm8c2QiKFsjajt6P6DFaoMgnHoEhwyEIJ-K2qgethpldQ-6n069IetA3xLFHrLDolcs8Sr01F97sDKWkDyW3Dd1rK2CZaOkRFM566cUGwWadnFeyThMa_RON5BStiRBlzJegHiQlro4msGct_B-SZdkXL7JwSpOIGNvwKCO84prEfdNkAmAuBTjXxGkMnEOgzWimoN7YhJTKdgLqzqn0kkz76jvoZ1qbZHtybPeD8YThCYdMTmdEbbteNAXttaa0X3elOCAPamws0XWoW1D68bpPbPY0iPKM3bXqJ7FTKECAcYEDgWoNzKUcTarejwsM_jDVD5kuAQjUH_o3xlaoO_5_9D3teTZcvk5aXpSd9rKMp5LOiOzco_Ak_qO1ZjCM70V45mNc2bOtkcZnAgPtChIYAZKBH_D_ASI1C5HBkaXgzOengK8JkgZNSfBO6M7rw1f8DZSVsnwBX-O-Jq7Bttwr6tgSrAPNa_NS8CBd_RzbwRfxXtf8HCDu4av0kdzwX0XdIChmPAMtIfdDswvoslHqRzZ7_nBSO_Gyz_tlx5J" />
+              <div className="mermaid">
+                {`
+                graph TD
+    Document["Document | Role=document"]
+    Body["Body | Role=none"]
+    Group1["Group | Role=group"]
+    Button1["Button | Role=button | Name=Deactivate account | Disabled=false"]
+    PortalRoot["Portal Root | Role=none"]
+    FocusGuard1["Focus Guard | Role=button | Aria-hidden=true"]
+    Dialog["Dialog | Role=dialog | Name=Deactivate account | Aria-modal=true"]
+    DialogBackdrop["Backdrop | Role=none | Aria-hidden=true"]
+    DialogContent["Content | Role=none"]
+    DialogPanel["Panel | Role=none"]
+    Icon["Icon | Role=none"]
+    Heading["Heading | Role=heading | Name=Deactivate account"]
+    Description["Description | Role=none | Content=Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone."]
+    DeactivateButton["Button | Role=button | Name=Deactivate"]
+    CancelButton["Button | Role=button | Name=Cancel"]
+    FocusGuard2["Focus Guard | Role=button | Aria-hidden=true"]
+
+    Document --> Body
+    Body --> Group1
+    Group1 --> Button1
+    Body --> PortalRoot
+    PortalRoot --> FocusGuard1
+    PortalRoot --> Dialog
+    Dialog --> DialogBackdrop
+    Dialog --> DialogContent
+    DialogContent --> DialogPanel
+    DialogPanel --> Icon
+    DialogPanel --> Heading
+    DialogPanel --> Description
+    DialogPanel --> DeactivateButton
+    DialogPanel --> CancelButton
+    PortalRoot --> FocusGuard2
+
+`}
+              </div>
             </Tabs.Content>
           </Tabs.Root>
         </div>
