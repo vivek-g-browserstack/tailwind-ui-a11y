@@ -50,14 +50,13 @@ export default function Home() {
               className="grow rounded-b-md p-5 outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
               value="tab1"
             >
-              <img className="h-[50vh]" src="https://mermaid.ink/svg/pako:eNp9UTFuwzAM_IrA2RnqUUOGwkCnTu1UKwMjsbZRizQUqUAQ5O-RLcR2l2rh3elwJMgbWHEEGrqAU68-G8Mqv0Zs8sRRHQ5H9SruWuQZLdJbkDS9FLHgTa53cl0CUozChv9mt09w2sLb0kEFGUkrFqbTvkm7lPW_m9neUP9jKEO0payO80IrxegzawhtHH4xkkJrJXGslBsueB7JafWN42WeByrwFDwOLu_tNqcbiD15MqAzdBh-DBi-Zx-mKB9XtqBjSFRBnqfrQS9JFaTJ5VbNgHn5flUn5C-RjZMbooT3cqblWvcHRJKQVg
-" />
+              <img className="h-[50vh]" src="https://mermaid.ink/svg/pako:eNpVkbFuxCAMhl8Fec4NXSOlwwmpUzu0nVo6-MBNUAOOODjpdL13L4FyaVnwbz7ZP_YFNBuCHsaAyyRepfIiH8k6OfLxXUELxbd45pkG86sVfFR2z-acufVqjGdPt_eHwGm5y0QJGjKuYquRYmS_QjVq1KGpJ3Q0SEId7QkjCdSaUzEl7REPM5nhE-dj7fr_D2K3uy8mN7slVX399VjJakV56MBRcGhNHs9l5RTEiVzu0efQYPhSoPw1c5giv5y9hj6GRB3kauMEfXHUQVpMtiwt5hm7W3ZB_8a8aTI2cnis2yhLuf4ALOCJmg" />
             </Tabs.Content>
             <Tabs.Content
               className="grow rounded-b-md p-5 outline-none focus:shadow-[0_0_0_2px] focus:shadow-black"
               value="tab2"
             >
-              <img src="https://mermaid.ink/svg/pako:eNqVVclu2zAQ_ZUBz3aA5qhDiyRGkxwKBK1PrXoYkxOLCMURKCqpEeTfy0WWZEduXF04y-Ms5BvqVUhWJAqxddhUsF6VFsK3YtnVZP2vUuzFUvzOvmtWu2CPCyzBsaECLFsaALeOu-ZTgCRhwGyjNkbpvGcbUVkaYJukLsBiHbQVofT6GT0BSsmd9QtQusWNIVXAI5p2zPvAzqP5zhzLzgpEbQB8Da20tx069Y-86DQuK60U2QK868b4K42Gt_FIkjDsVEntd9as0OSNp3s4CnmN8kk5bmJRvXhwsh8XdcPW5-vqpfmbyeAHtGTiEcV1Hngv2QZEXOYBd4RK23gYvTTAqqyf0zy10unG65RrTX_8Udcy91LAlSPYcQdt1wsvGFr0DGqMHsxun-ILXBkD_JiNCj3Ciw6WDUFDrg59W2924KjmZ1IXsK50CzFSaFeitewjtLMqlHExqXefLFPnfO4OIW7QSjLnbc_YGfJe_i95D2calsvPaYjHcU6mPLbTEc7IPKhH4HHWjmcvuSeTNuvPRJyScmLez8AJd8_wGfpPQInb70ifAJHU856eyvPOCVtPAQ7pMY-aMuCDo7ssrViIOhJWq_BEv0Z8KXxFdbjXIogK3VMpSvsWcNh5_rGzUhTp7RHhBreVKNITuRBdE6aAQjHhna_3kAbtT-Z6AJHSnt23_ENI_4W3v774Cp8" />
+              <img src="https://mermaid.ink/svg/pako:eNqdVU1v2zAM_SuCzkmB9RjAG9IG7XbYUHQ9bd6BkdhYqCwastQi6Prfpw87dlMFLZaLSPGFIqn3rGcuSCJf8Z2FrmF3m9qw8NuQ8C0a97vmo8n-slvSWMnBr_mfjL0guQ-4uIwYQwYP8WtLvvsUEMkYIbvoTDm8c2QiKFsjajt6P6DFaoMgnHoEhwyEIJ-K2qgethpldQ-6n069IetA3xLFHrLDolcs8Sr01F97sDKWkDyW3Dd1rK2CZaOkRFM566cUGwWadnFeyThMa_RON5BStiRBlzJegHiQlro4msGct_B-SZdkXL7JwSpOIGNvwKCO84prEfdNkAmAuBTjXxGkMnEOgzWimoN7YhJTKdgLqzqn0kkz76jvoZ1qbZHtybPeD8YThCYdMTmdEbbteNAXttaa0X3elOCAPamws0XWoW1D68bpPbPY0iPKM3bXqJ7FTKECAcYEDgWoNzKUcTarejwsM_jDVD5kuAQjUH_o3xlaoO_5_9D3teTZcvk5aXpSd9rKMp5LOiOzco_Ak_qO1ZjCM70V45mNc2bOtkcZnAgPtChIYAZKBH_D_ASI1C5HBkaXgzOengK8JkgZNSfBO6M7rw1f8DZSVsnwBX-O-Jq7Bttwr6tgSrAPNa_NS8CBd_RzbwRfxXtf8HCDu4av0kdzwX0XdIChmPAMtIfdDswvoslHqRzZ7_nBSO_Gyz_tlx5J" />
             </Tabs.Content>
           </Tabs.Root>
         </div>
