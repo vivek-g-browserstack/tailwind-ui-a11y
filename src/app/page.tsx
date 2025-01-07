@@ -84,7 +84,7 @@ export default function Home() {
                 graph TD
     Document["Document | Role=document"]
     Body["Body | Role=none"]
-    Group1["Group | Role=group"]
+    Group1["Group | Role=group | Aria-hidden=true"]
     Button1["Button | Role=button | Name=Deactivate account | Disabled=false"]
     PortalRoot["Portal Root | Role=none"]
     FocusGuard1["Focus Guard | Role=button | Aria-hidden=true"]
