@@ -10,6 +10,7 @@ export default function Home() {
 
   return (
     <main className="p-8">
+      <p className="mb-8 mx-auto text-center rounded-full bg-slate-200 w-fit px-4 py-2">Each node in the accessibility tree has four aspects: Name | Role | State | Value</p>
       <h2 className="text-4xl mb-4">Modal</h2>
       <div className="grid grid-cols-3 gap-4">
         <div className="col-span-1 border border-slate-300 p-4 rounded">
